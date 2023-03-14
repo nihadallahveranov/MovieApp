@@ -18,8 +18,6 @@ class TabBarViewController: UITabBarController {
     func setupTabBarController() {
         let homeTabBarItem = UITabBarItem(title: "home", image: UIImage(systemName: "house"), selectedImage: UIImage(named: "house.fill"))
         
-        let bookTabBarItem = UITabBarItem(title: "book", image: UIImage(systemName: "book"), selectedImage: UIImage(named: "book.fill"))
-        
         let homeVC = HomeViewController()
         
         homeVC.tabBarItem = homeTabBarItem
