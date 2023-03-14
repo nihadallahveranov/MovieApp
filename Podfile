@@ -7,5 +7,5 @@ target 'MovieApp' do
 
   # Pods for MovieApp
   pod 'SnapKit', '~> 5.0.0'
-  
+  pod 'lottie-ios'
 end

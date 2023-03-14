@@ -16,6 +16,14 @@
 		3B499C5729BF8B3500186FF9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B499C5629BF8B3500186FF9 /* TabBarViewController.swift */; };
 		3B499C6529BFA99C00186FF9 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B499C6429BFA99C00186FF9 /* UserDefaultsHelper.swift */; };
 		3B499C6B29BFAA1D00186FF9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B499C6A29BFAA1D00186FF9 /* HomeViewModel.swift */; };
+		3B499C6E29BFAB0600186FF9 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B499C6D29BFAB0600186FF9 /* OnBoardingViewController.swift */; };
+		3B499C7229BFB33700186FF9 /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B499C7129BFB33700186FF9 /* OnBoardingCollectionViewCell.swift */; };
+		3B499C7829C0CD8700186FF9 /* onboarding-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B499C7729C0CD8700186FF9 /* onboarding-1.json */; };
+		3B499C7A29C0CE2500186FF9 /* onboarding-3.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B499C7929C0CE2500186FF9 /* onboarding-3.json */; };
+		3B499C7F29C0CF6500186FF9 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B499C7E29C0CF6500186FF9 /* OnBoardingViewModel.swift */; };
+		3B499C8129C0CF9000186FF9 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B499C8029C0CF9000186FF9 /* OnBoardingModel.swift */; };
+		3B499C8329C0DB1100186FF9 /* onboarding-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B499C8229C0DB1100186FF9 /* onboarding-2.json */; };
+		3B499C8929C0F10A00186FF9 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B499C8829C0F10A00186FF9 /* CustomLabel.swift */; };
 		DE7AF8C2AE68E45AAE230AED /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AE54430A637AD31B05E982 /* Pods_MovieApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +40,14 @@
 		3B499C5629BF8B3500186FF9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		3B499C6429BFA99C00186FF9 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		3B499C6A29BFAA1D00186FF9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		3B499C6D29BFAB0600186FF9 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		3B499C7129BFB33700186FF9 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B499C7729C0CD8700186FF9 /* onboarding-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "onboarding-1.json"; sourceTree = "<group>"; };
+		3B499C7929C0CE2500186FF9 /* onboarding-3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "onboarding-3.json"; sourceTree = "<group>"; };
+		3B499C7E29C0CF6500186FF9 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
+		3B499C8029C0CF9000186FF9 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
+		3B499C8229C0DB1100186FF9 /* onboarding-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "onboarding-2.json"; sourceTree = "<group>"; };
+		3B499C8829C0F10A00186FF9 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		7E58F47E582ED7D207234F87 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C633967825AC86DE7842E31D /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,9 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				3B499C5329BF8AD300186FF9 /* Resources */,
+				3B499C7429C0BD0F00186FF9 /* Extensions */,
 				3B499C5C29BFA53A00186FF9 /* TabBar */,
 				3B499C6329BFA93A00186FF9 /* Helper */,
 				3B499C6629BFA9DA00186FF9 /* Entities */,
+				3B499C6C29BFAAF100186FF9 /* OnBoarding */,
 				3B499C6729BFA9E800186FF9 /* HomeScreen */,
 				3B499C4529BF8AC900186FF9 /* Main.storyboard */,
 				3B499C4A29BF8ACA00186FF9 /* LaunchScreen.storyboard */,
@@ -87,6 +105,9 @@
 				3B499C3F29BF8AC900186FF9 /* AppDelegate.swift */,
 				3B499C4129BF8AC900186FF9 /* SceneDelegate.swift */,
 				3B499C4829BF8ACA00186FF9 /* Assets.xcassets */,
+				3B499C7729C0CD8700186FF9 /* onboarding-1.json */,
+				3B499C8229C0DB1100186FF9 /* onboarding-2.json */,
+				3B499C7929C0CE2500186FF9 /* onboarding-3.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -103,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				3B499C6429BFA99C00186FF9 /* UserDefaultsHelper.swift */,
+				3B499C8829C0F10A00186FF9 /* CustomLabel.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -110,6 +132,7 @@
 		3B499C6629BFA9DA00186FF9 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				3B499C8029C0CF9000186FF9 /* OnBoardingModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -137,6 +160,47 @@
 				3B499C6A29BFAA1D00186FF9 /* HomeViewModel.swift */,
 			);
 			path = HomeViewModel;
+			sourceTree = "<group>";
+		};
+		3B499C6C29BFAAF100186FF9 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				3B499C7029BFB31C00186FF9 /* OnBoardingCell */,
+				3B499C6F29BFAB0B00186FF9 /* OnBoardingView */,
+				3B499C7D29C0CF3100186FF9 /* OnBoardingViewModel */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		3B499C6F29BFAB0B00186FF9 /* OnBoardingView */ = {
+			isa = PBXGroup;
+			children = (
+				3B499C6D29BFAB0600186FF9 /* OnBoardingViewController.swift */,
+			);
+			path = OnBoardingView;
+			sourceTree = "<group>";
+		};
+		3B499C7029BFB31C00186FF9 /* OnBoardingCell */ = {
+			isa = PBXGroup;
+			children = (
+				3B499C7129BFB33700186FF9 /* OnBoardingCollectionViewCell.swift */,
+			);
+			path = OnBoardingCell;
+			sourceTree = "<group>";
+		};
+		3B499C7429C0BD0F00186FF9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3B499C7D29C0CF3100186FF9 /* OnBoardingViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3B499C7E29C0CF6500186FF9 /* OnBoardingViewModel.swift */,
+			);
+			path = OnBoardingViewModel;
 			sourceTree = "<group>";
 		};
 		BB943A920F5E5514B6613CBE /* Frameworks */ = {
@@ -217,8 +281,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B499C4C29BF8ACA00186FF9 /* LaunchScreen.storyboard in Resources */,
+				3B499C8329C0DB1100186FF9 /* onboarding-2.json in Resources */,
 				3B499C4929BF8ACA00186FF9 /* Assets.xcassets in Resources */,
+				3B499C7829C0CD8700186FF9 /* onboarding-1.json in Resources */,
 				3B499C4729BF8AC900186FF9 /* Main.storyboard in Resources */,
+				3B499C7A29C0CE2500186FF9 /* onboarding-3.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +338,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B499C7F29C0CF6500186FF9 /* OnBoardingViewModel.swift in Sources */,
 				3B499C6529BFA99C00186FF9 /* UserDefaultsHelper.swift in Sources */,
+				3B499C8929C0F10A00186FF9 /* CustomLabel.swift in Sources */,
 				3B499C6B29BFAA1D00186FF9 /* HomeViewModel.swift in Sources */,
+				3B499C6E29BFAB0600186FF9 /* OnBoardingViewController.swift in Sources */,
+				3B499C8129C0CF9000186FF9 /* OnBoardingModel.swift in Sources */,
+				3B499C7229BFB33700186FF9 /* OnBoardingCollectionViewCell.swift in Sources */,
 				3B499C5729BF8B3500186FF9 /* TabBarViewController.swift in Sources */,
 				3B499C4429BF8AC900186FF9 /* HomeViewController.swift in Sources */,
 				3B499C4029BF8AC900186FF9 /* AppDelegate.swift in Sources */,
