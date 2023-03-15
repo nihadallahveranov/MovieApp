@@ -1,20 +1,24 @@
 PODS:
+  - Hero (1.6.2)
   - lottie-ios (4.1.3)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - Hero
   - lottie-ios
   - SnapKit (~> 5.0.0)
 
 SPEC REPOS:
   trunk:
+    - Hero
     - lottie-ios
     - SnapKit
 
 SPEC CHECKSUMS:
+  Hero: c69009dbc9e2f0472e081adc644dba05fcedae72
   lottie-ios: d0954d3150061f662ed0adf96ef98d7421864c47
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 10674ef6029da4f1a0e3a41e6098384b9e1e35fb
+PODFILE CHECKSUM: 65f7446b24494580e60613e0f8432b5a1a32dd68
 
 COCOAPODS: 1.11.3

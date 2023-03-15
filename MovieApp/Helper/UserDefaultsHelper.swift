@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum UserDefaultsKeys {
+    static let ONBOARDING_COMPLETED = "onboardingCompleted"
+}
+
 class UserDefaultsHelper {
     static let shared = UserDefaultsHelper()
     
@@ -26,5 +30,15 @@ class UserDefaultsHelper {
         } else {
             return nil
         }
+    }
+    
+    func getOnboardingCompleted() -> Bool {
+        let status = UserDefaults.standard.bool(forKey: UserDefaultsKeys.ONBOARDING_COMPLETED)
+        
+        return status
+    }
+    
+    func setOnboardingCompleted(_ value: Bool) {
+        UserDefaults.standard.set(value, forKey: UserDefaultsKeys.ONBOARDING_COMPLETED)
     }
 }

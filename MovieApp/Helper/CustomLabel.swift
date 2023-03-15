@@ -8,10 +8,22 @@
 import UIKit
 
 class CustomLabel: UILabel {
+//    
+    func customFont(_ size: CGFloat) -> UIFont {
+        return UIFont(name: "Helvetica", size: size)!
+    }
+    
+    func customFontBold(_ size: CGFloat) -> UIFont {
+        return UIFont(name: "Helvetica Bold", size: size)!
+    }
+    
+    func customFontLight(_ size: CGFloat) -> UIFont {
+        return UIFont(name: "Helvetica Light", size: size)!
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        font = UIFont(name: "Arial", size: 16)
+        font = customFont(16)
     }
     
     required init?(coder: NSCoder) {
