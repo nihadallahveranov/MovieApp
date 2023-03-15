@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Hero
 
 class OnBoardingViewController: UIViewController {
 
@@ -21,6 +22,7 @@ class OnBoardingViewController: UIViewController {
     private lazy var nextButton: UIButton = {
         let button = UIButton()
         button.setTitle("Next →", for: .normal)
+        button.setTitleColor(UIColor(named: "secondaryColor"), for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 21)
         button.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
         self.view.addSubview(button)
@@ -50,6 +52,8 @@ class OnBoardingViewController: UIViewController {
         view.backgroundColor = UIColor(named: "primaryColor")
         view.isPagingEnabled = true
         view.isUserInteractionEnabled = false
+        view.hero.isEnabled = true
+        view.hero.id = "ironMan"
 
         self.view.addSubview(view)
 
@@ -113,13 +117,11 @@ class OnBoardingViewController: UIViewController {
         if currentPage == viewModel.list.count - 1 {
             nextButton.backgroundColor = .white
             nextButton.layer.cornerRadius = 27
-            nextButton.setTitleColor(.black, for: .normal)
             nextButton.snp.removeConstraints()
             nextButton.snp.makeConstraints() { make in
                 make.bottom.equalTo(self.view.safeAreaLayoutGuide.snp.bottom)
                 make.left.equalTo(self.view.snp.left).offset(32)
                 make.right.equalTo(self.view.snp.right).offset(-32)
-                make.centerX.equalTo(self.view)
                 make.height.equalTo(54)
             }
         }

@@ -8,13 +8,13 @@
 import UIKit
 import SnapKit
 import Lottie
+import Hero
 
 class OnBoardingCollectionViewCell: UICollectionViewCell {
     
     private lazy var backgroundCellView: UIView = {
         let view = UIView()
-//        view.backgroundColor = UIColor(named: "primaryColor")
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "primaryColor")
 //        view.frame = self.bounds
         view.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height - 150)
         
@@ -26,9 +26,9 @@ class OnBoardingCollectionViewCell: UICollectionViewCell {
         let label = CustomLabel()
         label.numberOfLines = 0
         label.text = "Description label"
-        label.textColor = .lightGray
+        label.textColor = .darkGray
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 16, weight: .light)
+        label.font = label.customFontLight(16)
 
         self.addSubview(label)
         return label
@@ -38,9 +38,8 @@ class OnBoardingCollectionViewCell: UICollectionViewCell {
         let label = CustomLabel()
         label.numberOfLines = 0
         label.text = "Title for Movie App"
-        label.textColor = .white
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        label.font = label.customFontBold(24)
 
         self.addSubview(label)
         return label
@@ -56,6 +55,10 @@ class OnBoardingCollectionViewCell: UICollectionViewCell {
     }
     
     func setupViews() {
+        
+        self.hero.isEnabled = true
+        self.hero.id = "ironMan"
+        
         descriptionLabel.snp.makeConstraints() { make in
             make.bottom.equalTo(self.snp.bottom)
             make.left.equalTo(self.snp.left).offset(32)
@@ -77,7 +80,7 @@ class OnBoardingCollectionViewCell: UICollectionViewCell {
         
     }
     
-    // MARK: The animation is not added because the configure function is called before the view is created. for this, animation doesn't work correctly
+    // MARK: The animation is not correctly added because the configure function is called before the view is created.
     
     func configure(item: OnBoardingModel) {
         
@@ -88,7 +91,12 @@ class OnBoardingCollectionViewCell: UICollectionViewCell {
         animationView = .init(name: item.image)
         animationView!.frame = backgroundCellView.bounds
         animationView!.contentMode = .scaleAspectFit
-        animationView!.loopMode = .loop
+        
+        if item.image == OnBoardingLottieAnimations.ONBOARDING_3 {
+            animationView!.loopMode = .playOnce
+        } else {
+            animationView!.loopMode = .loop
+        }
         
         animationView!.animationSpeed = 0.5
         backgroundCellView.addSubview(animationView!)
