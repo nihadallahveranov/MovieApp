@@ -9,4 +9,6 @@ target 'MovieApp' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'lottie-ios'
   pod 'Hero'
+  pod 'Alamofire'
+  pod 'Kingfisher', '~> 7.0'
 end
