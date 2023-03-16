@@ -21,20 +21,26 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
+        
+        view.backgroundColor = UIColor(named: "primaryColor")
+        
+        HomeViewModel.shared.fetchMovies() { [weak self] in
+            guard let self = self else { return }
+            self.setupViews()
+            self.tableView.reloadData()
+        }
     }
     
     func setupViews() {
         view.hero.isEnabled = true
         view.hero.id = "ironMan"
-        view.backgroundColor = UIColor(named: "primaryColor")
         
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.register(HomeHeaderTableViewCell.self, forCellReuseIdentifier: "HomeHeaderTableViewCell")
-        tableView.register(HomeFirstMoviesTableViewCell.self, forCellReuseIdentifier: "HomeFirstMoviesTableViewCell")
+        tableView.register(HomeMoviesTableViewCell.self, forCellReuseIdentifier: "HomeMoviesTableViewCell")
         
         tableView.snp.makeConstraints() { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
@@ -48,7 +54,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,8 +66,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case 1:
             print("second")
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeFirstMoviesTableViewCell", for: indexPath) as! HomeFirstMoviesTableViewCell
-            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeMoviesTableViewCell", for: indexPath) as! HomeMoviesTableViewCell
+            cell.collectionView.tag = 0
+            return cell
+        case 2:
+            print("third")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeMoviesTableViewCell", for: indexPath) as! HomeMoviesTableViewCell
+            cell.collectionView.tag = 1
+            cell.configure()
             return cell
         default:
             return UITableViewCell()

@@ -52,7 +52,7 @@ class TabBarViewController: UITabBarController {
         self.tabBar.backgroundColor = UIColor(named: "primaryColor")
         
         let topBorderLayer = CALayer()
-        topBorderLayer.frame = CGRect(x: 0, y: -10, width: tabBar.frame.width, height: 1)
+        topBorderLayer.frame = CGRect(x: 0, y: 0, width: tabBar.frame.width, height: 1)
         topBorderLayer.backgroundColor = UIColor(named: "secondaryColor")?.cgColor
         tabBar.layer.addSublayer(topBorderLayer)    
     }

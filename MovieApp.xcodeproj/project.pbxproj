@@ -29,8 +29,11 @@
 		3BA7FBDA29C194D6005A7ACD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7FBD929C194D6005A7ACD /* SearchViewController.swift */; };
 		3BA7FBDC29C194DF005A7ACD /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7FBDB29C194DF005A7ACD /* SearchViewModel.swift */; };
 		3BA7FBDF29C24058005A7ACD /* HomeHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7FBDE29C24058005A7ACD /* HomeHeaderTableViewCell.swift */; };
-		3BA7FBE129C24874005A7ACD /* HomeFirstMoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7FBE029C24873005A7ACD /* HomeFirstMoviesTableViewCell.swift */; };
+		3BA7FBE129C24874005A7ACD /* HomeMoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7FBE029C24873005A7ACD /* HomeMoviesTableViewCell.swift */; };
 		3BA7FBE629C257F0005A7ACD /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7FBE529C257F0005A7ACD /* MovieCollectionViewCell.swift */; };
+		3BF48C8329C3711000CABF4B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF48C8229C3711000CABF4B /* Movie.swift */; };
+		3BF48C8629C37EA900CABF4B /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF48C8529C37EA900CABF4B /* MovieRepository.swift */; };
+		3BF48C8929C37EDD00CABF4B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF48C8829C37EDD00CABF4B /* NetworkService.swift */; };
 		DE7AF8C2AE68E45AAE230AED /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AE54430A637AD31B05E982 /* Pods_MovieApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +63,11 @@
 		3BA7FBD929C194D6005A7ACD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3BA7FBDB29C194DF005A7ACD /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		3BA7FBDE29C24058005A7ACD /* HomeHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		3BA7FBE029C24873005A7ACD /* HomeFirstMoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFirstMoviesTableViewCell.swift; sourceTree = "<group>"; };
+		3BA7FBE029C24873005A7ACD /* HomeMoviesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMoviesTableViewCell.swift; sourceTree = "<group>"; };
 		3BA7FBE529C257F0005A7ACD /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BF48C8229C3711000CABF4B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		3BF48C8529C37EA900CABF4B /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
+		3BF48C8829C37EDD00CABF4B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7E58F47E582ED7D207234F87 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C633967825AC86DE7842E31D /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +114,8 @@
 				3B499C6729BFA9E800186FF9 /* HomeScreen */,
 				3BA7FBCF29C19405005A7ACD /* SearchScreen */,
 				3BA7FBD029C19431005A7ACD /* WatchListScreen */,
+				3BF48C8429C37E8E00CABF4B /* Repo */,
+				3BF48C8729C37EC900CABF4B /* Network */,
 				3B499C4529BF8AC900186FF9 /* Main.storyboard */,
 				3B499C4A29BF8ACA00186FF9 /* LaunchScreen.storyboard */,
 				3B499C4D29BF8ACA00186FF9 /* Info.plist */,
@@ -149,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				3B499C8029C0CF9000186FF9 /* OnBoardingModel.swift */,
+				3BF48C8229C3711000CABF4B /* Movie.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -274,18 +283,18 @@
 			isa = PBXGroup;
 			children = (
 				3BA7FBE329C248A3005A7ACD /* HomeHeaderTableViewCell */,
-				3BA7FBE229C24895005A7ACD /* HomeFirstTableViewCell */,
+				3BA7FBE229C24895005A7ACD /* HomeMoviesTableViewCell */,
 			);
 			path = HomeCells;
 			sourceTree = "<group>";
 		};
-		3BA7FBE229C24895005A7ACD /* HomeFirstTableViewCell */ = {
+		3BA7FBE229C24895005A7ACD /* HomeMoviesTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				3BA7FBE429C257BE005A7ACD /* CollectionViewCell */,
-				3BA7FBE029C24873005A7ACD /* HomeFirstMoviesTableViewCell.swift */,
+				3BA7FBE029C24873005A7ACD /* HomeMoviesTableViewCell.swift */,
 			);
-			path = HomeFirstTableViewCell;
+			path = HomeMoviesTableViewCell;
 			sourceTree = "<group>";
 		};
 		3BA7FBE329C248A3005A7ACD /* HomeHeaderTableViewCell */ = {
@@ -302,6 +311,22 @@
 				3BA7FBE529C257F0005A7ACD /* MovieCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		3BF48C8429C37E8E00CABF4B /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				3BF48C8529C37EA900CABF4B /* MovieRepository.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		3BF48C8729C37EC900CABF4B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3BF48C8829C37EDD00CABF4B /* NetworkService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		BB943A920F5E5514B6613CBE /* Frameworks */ = {
@@ -443,16 +468,19 @@
 				3B499C6529BFA99C00186FF9 /* UserDefaultsHelper.swift in Sources */,
 				3B499C8929C0F10A00186FF9 /* CustomLabel.swift in Sources */,
 				3B499C6B29BFAA1D00186FF9 /* HomeViewModel.swift in Sources */,
+				3BF48C8329C3711000CABF4B /* Movie.swift in Sources */,
 				3BA7FBD429C194A4005A7ACD /* WatchListViewController.swift in Sources */,
 				3B499C6E29BFAB0600186FF9 /* OnBoardingViewController.swift in Sources */,
 				3BA7FBDC29C194DF005A7ACD /* SearchViewModel.swift in Sources */,
+				3BF48C8629C37EA900CABF4B /* MovieRepository.swift in Sources */,
 				3B499C8129C0CF9000186FF9 /* OnBoardingModel.swift in Sources */,
 				3B499C7229BFB33700186FF9 /* OnBoardingCollectionViewCell.swift in Sources */,
 				3BA7FBDA29C194D6005A7ACD /* SearchViewController.swift in Sources */,
 				3B499C5729BF8B3500186FF9 /* TabBarViewController.swift in Sources */,
+				3BF48C8929C37EDD00CABF4B /* NetworkService.swift in Sources */,
 				3BA7FBD629C194B3005A7ACD /* WatchListViewModel.swift in Sources */,
 				3B499C4429BF8AC900186FF9 /* HomeViewController.swift in Sources */,
-				3BA7FBE129C24874005A7ACD /* HomeFirstMoviesTableViewCell.swift in Sources */,
+				3BA7FBE129C24874005A7ACD /* HomeMoviesTableViewCell.swift in Sources */,
 				3BA7FBDF29C24058005A7ACD /* HomeHeaderTableViewCell.swift in Sources */,
 				3BA7FBE629C257F0005A7ACD /* MovieCollectionViewCell.swift in Sources */,
 				3B499C4029BF8AC900186FF9 /* AppDelegate.swift in Sources */,

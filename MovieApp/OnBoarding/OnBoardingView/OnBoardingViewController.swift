@@ -115,7 +115,7 @@ class OnBoardingViewController: UIViewController {
         }
         
         if currentPage == viewModel.list.count - 1 {
-            nextButton.backgroundColor = .white
+            nextButton.backgroundColor = UIColor(named: "cellColor")
             nextButton.layer.cornerRadius = 27
             nextButton.snp.removeConstraints()
             nextButton.snp.makeConstraints() { make in
