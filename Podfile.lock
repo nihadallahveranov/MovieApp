@@ -4,6 +4,7 @@ PODS:
   - Kingfisher (7.6.2)
   - lottie-ios (4.1.3)
   - SnapKit (5.0.1)
+  - YoutubePlayer-in-WKWebView (0.3.8)
 
 DEPENDENCIES:
   - Alamofire
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - Kingfisher (~> 7.0)
   - lottie-ios
   - SnapKit (~> 5.0.0)
+  - YoutubePlayer-in-WKWebView (~> 0.3.0)
 
 SPEC REPOS:
   trunk:
@@ -19,6 +21,7 @@ SPEC REPOS:
     - Kingfisher
     - lottie-ios
     - SnapKit
+    - YoutubePlayer-in-WKWebView
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
@@ -26,7 +29,8 @@ SPEC CHECKSUMS:
   Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
   lottie-ios: d0954d3150061f662ed0adf96ef98d7421864c47
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  YoutubePlayer-in-WKWebView: 4fca3b4f6f09940077bfbae7bddb771f2b43aacd
 
-PODFILE CHECKSUM: 260d35035a3b80c8974b536b233bdc30eb65da8b
+PODFILE CHECKSUM: 5e734b919e4389d8f6b8453f20366f7e17f4c0f4
 
 COCOAPODS: 1.11.3

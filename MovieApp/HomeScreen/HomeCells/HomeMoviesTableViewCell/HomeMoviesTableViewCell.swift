@@ -141,7 +141,17 @@ extension HomeMoviesTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        detailVC.movie = HomeViewModel.shared.movies[indexPath.row]
         
+        let detailVCWithNavigation = UINavigationController(rootViewController: detailVC)
+        detailVCWithNavigation.modalPresentationStyle = .fullScreen
+        
+        guard let currentViewController = UIApplication.shared.windows.first?.rootViewController else {
+            return
+        }
+        
+        currentViewController.present(detailVCWithNavigation, animated: true)
     }
     
     

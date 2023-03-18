@@ -61,24 +61,31 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.row {
         case 0:
             print("first")
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeHeaderTableViewCell", for: indexPath) as! HomeHeaderTableViewCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeHeaderTableViewCell", for: indexPath) as? HomeHeaderTableViewCell {
+                return cell
+            }
             
-            return cell
+            return UITableViewCell()
         case 1:
             print("second")
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeMoviesTableViewCell", for: indexPath) as! HomeMoviesTableViewCell
-            cell.collectionView.tag = 0
-            return cell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeMoviesTableViewCell", for: indexPath) as? HomeMoviesTableViewCell {
+                cell.collectionView.tag = 0
+                return cell
+            }
+            
+            return UITableViewCell()
         case 2:
             print("third")
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeMoviesTableViewCell", for: indexPath) as! HomeMoviesTableViewCell
-            cell.collectionView.tag = 1
-            cell.configure()
-            return cell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeMoviesTableViewCell", for: indexPath) as? HomeMoviesTableViewCell {
+                cell.collectionView.tag = 1
+                cell.configure()
+                return cell
+            }
+            
+            return UITableViewCell()
         default:
             return UITableViewCell()
         }
     }
-    
     
 }

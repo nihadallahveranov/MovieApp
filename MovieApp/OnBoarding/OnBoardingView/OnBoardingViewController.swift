@@ -109,8 +109,10 @@ class OnBoardingViewController: UIViewController {
 
         } else {
             print("finish")
+            UserDefaultsHelper.shared.setOnboardingCompleted(true)
             let homeViewController = TabBarViewController()
             homeViewController.modalPresentationStyle = .fullScreen
+            UIApplication.shared.windows.first?.rootViewController = homeViewController
             present(homeViewController, animated: true)
         }
         

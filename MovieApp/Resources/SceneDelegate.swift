@@ -23,7 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             if UserDefaultsHelper.shared.getOnboardingCompleted() {
                 window.rootViewController = TabBarViewController()
             } else {
-                UserDefaultsHelper.shared.setOnboardingCompleted(true)
                 window.rootViewController = OnBoardingViewController()
             }
             self.window = window
