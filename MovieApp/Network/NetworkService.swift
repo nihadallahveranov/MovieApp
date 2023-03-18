@@ -10,6 +10,8 @@ import Alamofire
 
 enum Endpoint {
     static let getList = "https://yts.mx/api/v2/list_movies.json?sort=seeds&limit=15" // limit=15
+    static let getSearchList = "https://imdb-api.com/API/AdvancedSearch/k_56gcqd4c?title="
+    static let getYoutubeVideo = "https://imdb-api.com/en/API/YouTubeTrailer/k_56gcqd4c/"
 }
 
 class NetworkService {

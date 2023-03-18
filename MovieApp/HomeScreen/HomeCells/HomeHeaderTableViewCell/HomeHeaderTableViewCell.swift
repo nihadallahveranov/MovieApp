@@ -48,6 +48,7 @@ class HomeHeaderTableViewCell: UITableViewCell {
             make.top.equalTo(self.contentView.snp.top).offset(16)
             make.left.equalTo(self.contentView.snp.left).offset(16)
             make.right.equalTo(self.contentView.snp.right).offset(-16)
+            make.bottom.equalTo(self.contentView.snp.bottom).offset(-16)
         }
     }
 

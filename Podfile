@@ -11,4 +11,5 @@ target 'MovieApp' do
   pod 'Hero'
   pod 'Alamofire'
   pod 'Kingfisher', '~> 7.0'
+  pod "YoutubePlayer-in-WKWebView", "~> 0.3.0"
 end
