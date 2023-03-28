@@ -19,6 +19,14 @@ class HomeViewController: UIViewController {
         return view
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,6 +78,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             print("second")
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeMoviesTableViewCell", for: indexPath) as? HomeMoviesTableViewCell {
                 cell.collectionView.tag = 0
+                cell.delegate = self
                 return cell
             }
             
@@ -78,6 +87,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             print("third")
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeMoviesTableViewCell", for: indexPath) as? HomeMoviesTableViewCell {
                 cell.collectionView.tag = 1
+                cell.delegate = self
                 cell.configure()
                 return cell
             }
@@ -88,4 +98,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+}
+
+extension HomeViewController: HomeViewControllerDelegate {
+    func pushToNewViewController(_ viewController: UIViewController) {
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }

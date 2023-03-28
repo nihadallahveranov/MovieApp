@@ -32,9 +32,9 @@ class TabBarViewController: UITabBarController {
                                                image: UIImage(systemName: "bookmark"),
                                                selectedImage: UIImage(systemName: "bookmark"))
         
-        let homeVC = HomeViewController()
-        let searchVC = SearchViewController()
-        let watchlistVC = WatchListViewController()
+        let homeVC = UINavigationController(rootViewController: HomeViewController())
+        let searchVC = UINavigationController(rootViewController: SearchViewController())
+        let watchlistVC = UINavigationController(rootViewController: WatchListViewController())
         
         homeVC.tabBarItem = homeTabBarItem
         searchVC.tabBarItem = searchTabBarItem
