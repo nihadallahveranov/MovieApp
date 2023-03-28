@@ -64,7 +64,7 @@ class DetailViewController: UIViewController {
     }
     
     @objc func backButtonTapped() {
-        dismiss(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @objc func bookmarkButtonTapped() {

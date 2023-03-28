@@ -8,7 +8,13 @@
 import UIKit
 import SnapKit
 
+protocol HomeViewControllerDelegate: AnyObject {
+    func pushToNewViewController(_ viewController: UIViewController)
+}
+
 class HomeMoviesTableViewCell: UITableViewCell {
+    
+    weak var delegate: HomeViewControllerDelegate?
     
     private lazy var titleLabel: CustomLabel = {
         let label = CustomLabel()
@@ -144,14 +150,7 @@ extension HomeMoviesTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         let detailVC = DetailViewController()
         detailVC.movie = HomeViewModel.shared.movies[indexPath.row]
         
-        let detailVCWithNavigation = UINavigationController(rootViewController: detailVC)
-        detailVCWithNavigation.modalPresentationStyle = .fullScreen
-        
-        guard let currentViewController = UIApplication.shared.windows.first?.rootViewController else {
-            return
-        }
-        
-        currentViewController.present(detailVCWithNavigation, animated: true)
+        delegate?.pushToNewViewController(detailVC)
     }
     
     

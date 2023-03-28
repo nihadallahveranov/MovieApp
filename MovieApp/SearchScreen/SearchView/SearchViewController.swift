@@ -33,11 +33,17 @@ class SearchViewController: UIViewController {
         setupViews()
         // Do any additional setup after loading the view.
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        
         viewModel.movies = []
         tableView.reloadData()
         movieSearchBar.text = ""
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
     
     func setupViews() {
